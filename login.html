@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DirEngine - Free Bootstrap 4 Template by Colorlib</title>
+    <title>青蛙旅行</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -26,23 +26,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-      *[data-highlight="true"] {
-  position: relative;
-}
-
-*[data-highlight="true"]:after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid none;
-}
-    </style>
+   <link rel="stylesheet" href="css/transc.css">
+    <link rel="stylesheet" href="css/dropColumn.css">
   </head>
   <body>
     
@@ -58,10 +43,14 @@
           <!--  这些按钮用户登录之后才会看到        -->
           <li class="nav-item"><a href="index.html" class="nav-link">主页</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">私人定制</a></li>
-          <li class="nav-item"><a href="tour.html" class="nav-link">个人中心</a></li>
           <li class="nav-item"><a href="hotel.html" class="nav-link">分享攻略</a></li>
-          <li class="nav-item"><p class="nav-link">你好，</p></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">注销</a></li>
+          <div class="dropdown">
+          <li class="dropbtn">你好，{{ request.user.name }}</li>
+          <div class="dropdown-content">
+            <a href="">个人中心</a>
+            <a href="">注销</a>
+          </div>
+        </div>
 <!--          用户未登录时的按钮-->
           <li class="nav-item"><a href="register.html" class="nav-link">注册</a></li>
           <li class="nav-item cta"><a href="login.html" class="nav-link"><span>登录</span></a></li>
@@ -76,21 +65,22 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
          <section class="ftco-section contact-section ftco-degree-bg">
-      <div class="container" data-highlight="true" style="text-align: center">
+      <div class="container" data-highlight="true" >
           <div class="col-md-12 mb-4" >
+            <br>
           <h2 class="h3">登录</h2>
                 </div>
         <div class="row block-9" >
           <div class="col-md-6 pr-md-5" >
             <form action="#" style="text-align: center">
-              <div class="form-group" style="text-align:center; vertical-align:middle;">
-                <input type="text" class="form-control" placeholder="邮箱" style="align: center">
+              <div class="form-group" >
+                <input type="text" class="form-control" placeholder="邮箱" >
               </div>
               <div class="form-group">
-                <input type="password" class="form-control" placeholder="密码" style="align: center">
+                <input type="password" class="form-control" placeholder="密码" >
               </div>
               <div class="form-group">
-                <input type="submit" value="登录" class="btn btn-primary py-3 px-5" style="align: center">
+                <input type="submit" value="登录" class="btn btn-primary py-3 px-5" >
               </div>
             </form>
 
