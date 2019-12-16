@@ -71,20 +71,22 @@
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
                  data-scrollax-parent="true">
                 <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <img src="/images/person_2.jpg" alt="Responsive image" class="userInfo img-thumbnail"
+                    <img src="/images/person_4.jpg.jpg" alt="Responsive image" class="userInfo img-thumbnail"
                          width="180" height="180">
 
                     <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
                         style="margin-bottom: 10px; font-size: 2.5rem">XX的窝</h1>
                     <div id="app-6">
-                        <label >女</label>
+                    <span class="inline" ><strong> 女</strong></span>
+                    <!--关注数-->
+                  <span class="inline"><a class=followNumber href="userList.html" ><strong>关注:66</strong></a></span>
+<!--                    粉丝数-->
+                   <span class="inline" ><a class=followNumber href="userList.html" ><strong>粉丝:66</strong></a></span>
+<!--                        当用户为本人时，显示-->
+                        <span class="inline" ><a class=followNumber href="discount.html" ><strong>我的折扣券</strong></a></span>
 
-                        <label  id="follow_number">关注数：</label>
-
-                        <label id="fan_number">粉丝数:</label>
-                        <p></p>
-                        <button class="btn btn-default {% if tag == 0 %}follow{% endif %}" id="followButton"
-                                type="button" width="80" onclick="follow();">+关注</button>
+<!--                        关注后按钮变为“取消关注”-->
+                        <p></p><button class="btn btn-default"  id="followButton" type="button" width="80" onclick="follow();">+关注</button>
                     </div>
 
                 </div>
