@@ -4,13 +4,11 @@
     <title>DirEngine - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+ <link href="https://cdn.bootcss.com/select2/4.0.6-rc.1/css/select2.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -22,13 +20,13 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+
  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">青蛙旅行</a>
@@ -41,7 +39,7 @@
           <!--  这些按钮用户登录之后才会看到        -->
          <li class="nav-item"><a href="index.html" class="nav-link">主页</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">私人定制</a></li>
-          <li class="nav-item"><a href="hotel.html" class="nav-link">分享攻略</a></li>
+          <li class="nav-item"><a href="hotel+spot.html" class="nav-link">分享攻略</a></li>
           <div class="dropdown">
           <li class="dropbtn"><a class="nav-link">你好，{{ request.user.name }}</a></li>
           <div class="dropdown-content">
@@ -57,14 +55,14 @@
     </div>
   </nav>
     <!-- END nav -->
-    
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_4.jpg');">
+
+    <div class="hero-wrap js-halfheight" style="background-image: url('images/bg_4.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">主页</a></span> <span class="mr-2"><a href="blog.html">攻略</a></span> </p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">攻略</h1>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> </p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></h1>
           </div>
         </div>
       </div>
@@ -75,152 +73,66 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 ftco-animate">
-            <h2 class="mb-3">攻略标题</h2>
-            <p>此处是攻略正文</p>
-            <p>
-<!--              攻略图片-->
-              <img src="images/image_7.jpg" alt="" class="img-fluid">
-            </p>
-           <p>
-              <img src="images/image_8.jpg" alt="" class="img-fluid">
-            </p>
-            
-            <div class="about-author d-flex p-5 bg-light">
-              <div class="bio align-self-md-center mr-5">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4" width=400px >
-              </div>
-              <div class="desc align-self-md-center">
-                <h3>作者</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-
-              </div>
-            </div>
-          <div class="comment-form-wrap pt-5">
+              <form action="#" class="p-5 bg-light">
+                  <h3 class="mb-3">攻略标题</h3>
                 <div class="form-group">
-<!--                  点赞之后按钮变红色，点赞数加一-->
-                    <button onclick="digg();" class="btn py-3 px-4 {% if digg_tag and digg_tag == 1 %}btn-primary{% endif %}" id="diggButton" style="color:black;"><img src="/images/digg.png" style="width: 30px; height: 30px;">665</button>
-                </div>
-            </div>
-
-            <div class="pt-5 mt-5">
-              <h3 class="mb-5">6 条评论</h3>
-              <ul class="comment-list">
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
+                    <textarea name="" id="title" cols="30" rows="1" class="form-control"></textarea>
                   </div>
-                  <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">June 27, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">回复</a></p>
-                  </div>
-
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                      </div>
-                      <div class="comment-body">
-                        <h3>John Doe</h3>
-                        <div class="meta">June 27, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply">回复</a></p>
-                      </div>
-
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-              <!-- END comment-list -->
-              
-              <div class="comment-form-wrap pt-5">
-                <h3 class="mb-5">评论</h3>
-                <form action="#" class="p-5 bg-light">
-
-                  <div class="form-group">
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+              <h3 class="mb-3">攻略内容</h3>
+                <div class="form-group">
+                    <textarea name="" id="content" cols="30" rows="30" class="form-control"></textarea>
                   </div>
                   <div class="form-group">
-                    <input type="submit" value="发表评论" class="btn py-3 px-4 btn-primary">
+                    <input type="submit" value="发表攻略" class="btn py-3 px-4 btn-primary">
                   </div>
-
-                </form>
-              </div>
-            </div>
+              </form>
 
           </div> <!-- .col-md-8 -->
+
           <div class="col-md-4 sidebar ftco-animate">
+
             <div class="sidebar-box">
-              <form action="#" class="search-form">
-                <div class="form-group">
-                  <span class="icon fa fa-search"></span>
-                  <input type="text" class="form-control" placeholder="搜索其它攻略内容">
+             <div class="works-wrap">
+                 <div class="figure-box" id="figure_box"></div>
+                  <input type="file" id="imgUploadBtn" >
+                 <p></p><input class="button white" type="button" value="添加图片" />
                 </div>
-              </form>
-            </div>
-<!--            <div class="sidebar-box ftco-animate">-->
-<!--              <div class="categories">-->
-<!--                <h3>Categories</h3>-->
-<!--                <li><a href="#">Tour <span>(12)</span></a></li>-->
-<!--                <li><a href="#">Hotel <span>(22)</span></a></li>-->
-<!--                <li><a href="#">Coffee <span>(37)</span></a></li>-->
-<!--                <li><a href="#">Drinks <span>(42)</span></a></li>-->
-<!--                <li><a href="#">Foods <span>(14)</span></a></li>-->
-<!--                <li><a href="#">Travel <span>(140)</span></a></li>-->
-<!--              </div>-->
-<!--            </div>-->
-            <div class="sidebar-box ftco-animate">
-              <h3>城市</h3>
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">北京</a>
-                <a href="#" class="tag-cloud-link">天津</a>
-                <a href="#" class="tag-cloud-link">石家庄</a>
-              </div>
-            </div>
 
             <div class="sidebar-box ftco-animate">
-              <h3>景点</h3>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <div class="meta">
+              <form id="send_post_form" method="POST">
+                   <div class="form-group">
+                    <label style="font-size:24px;margin: 0px 0px 10px 0px;">城市</label>
+                <input class="form-control"  name="days" placeholder="城市" id="city" >
+                       <select id='userList'></select>
+                <script>$("#userList").select2()</script>
+            </div>
+            <div class="form-group">
+                    <label style="font-size:24px;margin: 0px 0px 10px 0px;">景点</label>
+                <input class="form-control"  name="days" placeholder="景点" id="spot">
+                <label style="font-size:15px;margin: 0px 0px 10px 0px;word-wrap: break-word; word-break: normal;" id="spots"></label>
+                                 <p></p><input class="button white" onClick="showSpot()" type="button" value="添加" />
 
-                  </div>
-                </div>
+            </div>
+            <div class="form-group">
+                    <label style="font-size:24px;margin: 0px 0px 10px 0px;" >酒店</label>
+                <input class="form-control"  name="peopleNumber" placeholder="酒店" id="hotel">
+                <label style="font-size:15px;margin: 0px 0px 10px 0px;word-wrap: break-word; word-break: normal;" id="hotels"></label>
+                                 <p></p><input class="button white" onClick="showHotel()" type="button" value="添加" />
+
               </div>
+              <div class="form-group">
+                    <label style="font-size:24px;margin: 0px 0px 10px 0px;">餐厅</label>
+                  <input class="form-control"  name="budget" placeholder="餐厅" id="rest">
+                  <label style="font-size:15px;margin: 0px 0px 10px 0px;word-wrap: break-word; word-break: normal;" id="rests"></label>
+                                   <p></p><input class="button white" type="button" onClick="showRest()" value="添加" />
+
+              </div>
+
+            </form>
             </div>
 
-            <div class="sidebar-box ftco-animate">
-              <h3>餐厅</h3>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <div class="meta">
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3>酒店</h3>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <div class="meta">
-
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-
+        </div>
         </div>
       </div>
     </section> <!-- .section -->
@@ -287,12 +199,35 @@
         </div>
       </div>
     </footer>
-    
-  
+
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+<script>
+function showSpot(){
+    var show = document.getElementById("spots");//显示文本的对象
+    var content = document.getElementById("spot");//输入文字的对象
+    var trim = ";";
+    show.innerHTML += (content.value + trim);//把两个相连接
+        content.value = "";
+}
+function showHotel(){
+    var show = document.getElementById("hotels");//显示文本的对象
+    var content = document.getElementById("hotel");//输入文字的对象
+    var trim = ";";
+    show.innerHTML += (content.value + trim);//把两个相连接
+        content.value = "";
+}
+function showRest(){
+    var show = document.getElementById("rests");//显示文本的对象
+    var content = document.getElementById("rest");//输入文字的对象
+    var trim = ";";
+    show.innerHTML += (content.value + trim);//把两个相连接
+        content.value = "";
+}
+</script>
+<script src="https://cdn.bootcss.com/select2/4.0.6-rc.1/js/select2.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -307,9 +242,8 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+
   </body>
 </html>
