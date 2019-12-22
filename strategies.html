@@ -39,16 +39,18 @@
           <!--  这些按钮登录之后才会看到        -->
          <li class="nav-item"><a href="index.html" class="nav-link">主页</a></li>
 <!--            普通用户-->
-          <li class="nav-item"><a href="about.html" class="nav-link">私人定制</a></li>
-          <li class="nav-item"><a href="hotel+spot.html" class="nav-link">分享攻略</a></li>
+          <li class="nav-item"><a href="submitOrder.html" class="nav-link">私人定制</a></li>
+          <li class="nav-item"><a href="write.html" class="nav-link">分享攻略</a></li>
 <!--            管理员-->
-            <li class="nav-item"><a href="about.html" class="nav-link">查看订单</a></li>
-          <li class="nav-item"><a href="hotel+spot.html" class="nav-link">精选攻略</a></li>
-          <div class="dropdown">
-          <li class="dropbtn"><a class="nav-link">你好，{{ request.user.name }}</a></li>
+            <li class="nav-item"><a href="handleOrder.html" class="nav-link">查看订单</a></li>
+          <li class="nav-item"><a href="strategies.html" class="nav-link">精选攻略</a></li>
+            <div class="dropdown">
+                <div class=" navbar-nav ml-auto collapse navbar-collapse">
+                    <li class="dropbtn nav-item"><a class="nav-link">你好，{{ request.user.name }}</a></li>
+                </div>
           <div class="dropdown-content">
-            <a href="">个人中心</a>
-            <a href="">注销</a>
+            <a href="user.html">个人中心</a>
+            <a href="index.html">注销</a>
           </div>
         </div>
 <!--          用户未登录时的按钮-->
@@ -178,9 +180,6 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
- <script src="js/layui/css/layui.js"></script>
-  <script src="js/layui/layui.all.js"></script>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -194,7 +193,6 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
 
