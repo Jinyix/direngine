@@ -90,7 +90,6 @@
                    <span class="inline" ><a class=followNumber href="userList.html" ><strong>粉丝:66</strong></a></span>
 <!--                        当用户为本人时，显示-->
                         <span class="inline" ><a class=followNumber href="discount.html" ><strong>我的折扣券</strong></a></span>
-
 <!--                        关注后按钮变为“取消关注”-->
                         <p></p><button class="btn btn-default"  id="followButton" type="button" width="80" onclick="follow();">+关注</button>
                     </div>
@@ -221,14 +220,19 @@
       </div>
     </footer>
 
-
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
  <script src="js/layui/css/layui.js"></script>
   <script src="js/layui/layui.all.js"></script>
   <script>
-
+function follow(){
+    if(document.getElementById("followButton").innerHTML == "取消关注") {
+              document.getElementById("followButton").innerHTML="+关注";
+    }
+    else{
+                document.getElementById("followButton").innerHTML="取消关注";
+    }
+    }
 </script>
 
   <script src="js/jquery.min.js"></script>

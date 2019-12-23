@@ -61,7 +61,7 @@
   </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_4.jpg');">
+    <div class="hero-wrap js-halfheight" style="background-image: url('images/bg_4.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -78,6 +78,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 ftco-animate">
+            <h1>标题</h1>
             <p>此处是攻略正文</p>
             <p>
 <!--              攻略图片-->
@@ -101,7 +102,7 @@
           <div class="comment-form-wrap pt-5">
                 <div class="form-group">
 <!--                  点赞之后按钮变红色，点赞数加一-->
-                    <button onclick="digg();" class="btn py-3 px-4 {% if digg_tag and digg_tag == 1 %}btn-primary{% endif %}" id="diggButton" style="color:black;"><img src="/images/digg.png" style="width: 30px; height: 30px;">665</button>
+                    <button onclick="digg()" class="btn py-3 px-4 " id="diggButton" style="color:black;"><img src="/images/digg.png" style="width: 30px; height: 30px;">665</button>
                 </div>
             </div>
 
@@ -271,7 +272,20 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<script>
+  var changed=false;
+  function digg() {
+    if(changed==false){//此时未点赞
+            document.getElementById("diggButton").style.backgroundColor="#F85959";
+            changed=true;//已点赞
+    }
+    else{//取消点赞
+            document.getElementById("diggButton").style.backgroundColor="#e2e6ea";
+            changed=false;
+    }
 
+  }
+</script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>

@@ -8550,6 +8550,7 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-position: center center;
   height: 250px;
+  width: 250px;
   position: relative;
   display: block; }
 
@@ -8609,7 +8610,10 @@ textarea.form-control {
     color: white; }
 
 .block-6 {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  width: 230px;
+  height:300px;
+border: 1px solid #e6e6e6;}
   .block-6 .media-body p {
     font-size: 16px; }
 
